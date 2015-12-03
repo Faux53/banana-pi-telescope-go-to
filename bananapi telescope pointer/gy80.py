@@ -58,6 +58,8 @@ except ImportError:
 from quaternions import _check_close
 from quaternions import quaternion_to_rotation_matrix_rows, quaternion_from_rotation_matrix_rows
 from quaternions import quaternion_from_axis_angle
+from quaternions import axisangle_to_q
+from quaternions import q_to_axisangle
 from quaternions import quaternion_from_euler_angles, quaternion_to_euler_angles
 from quaternions import quaternion_multiply, quaternion_normalise
 
