@@ -1,18 +1,8 @@
-Hobby project to try out webcam image capture using Python,
-with a view to astrophotography. Initial aims included doing
-image capture under Mac OS X with control of exposure, gain,
-white balance etc. That turns out to be problematic due to
-driver issues.
+I looked around for some point to telescope tutorials that I liked but couldnt find anything that really suited my needs so I made a frankenstein of code that works well together.
 
-Currently looking at integrating an I2C orientation sensor
-via a Raspberry Pi to mimic a computerised "Goto" telescope
-mount using the Meade LX200 protocol, in order to track where
-a telescope is pointing via client software like Sky Safari:
-http://astrobeano.blogspot.co.uk/2014/01/instrumented-telescope-with-raspberry.html
+Eventually I'd like to make this a motor mounted go to telescope but ill have some things to work out before doing that, specifically getting a telescope that will work with it.  But this is great for going out and doing some quick ameture astronomy.  Astrobeano also added a camera functionality that i like and havent played with yet.  I plan on using soemthing like this to help with that, http://www.circuitspecialists.com/bpi-d1-camera-board.html,  With that i'd be able to nix the banana pi completley, and save a ton of space.
 
-Potential medium/long term ambitions may
-include doing image alignment/registration and stacking -
-combining multiple frames to maximum light collection and
-cancel out noise, but also stiching images together (e.g.
-for lunar photography) using techniques similar to those for
-constructing panoramas.
+
+It uses astropy from http://www.astropy.org/ for things like calculating Greenwich sidereal time, so you need to install that too.
+
+Have fun! If you have any questions let me know and ill address them.
