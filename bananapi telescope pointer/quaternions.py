@@ -33,7 +33,21 @@ def quaternion_from_axis_angle(vector, theta):
     sin_half_theta = sin(theta/2)
     return cos(theta/2), vector[0]*sin_half_theta, vector[1]*sin_half_theta, vector[2]*sin_half_theta
 
-#TODO - Write quaternion_to_axis_angle and cross-validate
+#to axis angle for quaternions
+def axisangle_to_q(v, theta):
+    v = normalize(v)
+    x, y, z = v
+    theta /= 2
+    w = cos(theta)
+    x = x * sin(theta)
+    y = y * sin(theta)
+    z = z * sin(theta)
+    return w, x, y, z
+
+def q_to_axisangle(q):
+    w, v = q[0], q[1:]
+    theta = acos(w) * 2.0
+    return normalize(v), theta
 
 def quaternion_to_rotation_matrix_rows(w, x, y, z):
     """Returns a tuple of three rows which make up a 3x3 rotatation matrix.
@@ -86,7 +100,6 @@ def quaternion_from_rotation_matrix_rows(row0, row1, row2):
     return w, x, y, z
 
 
-#TODO - Double check which angles exactly have I calculated (which frame etc)?
 def quaternion_from_euler_angles(yaw, pitch, roll):
     """Returns (w, x, y, z) quaternion from angles in radians.
 
