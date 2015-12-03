@@ -5,4 +5,6 @@ Eventually I'd like to make this a motor mounted go to telescope but ill have so
 
 It uses astropy from http://www.astropy.org/ for things like calculating Greenwich sidereal time, so you need to install that too.
 
+also the official blog for this project is http://andrewsastroblog.blogspot.com/
+
 Have fun! If you have any questions let me know and ill address them.
